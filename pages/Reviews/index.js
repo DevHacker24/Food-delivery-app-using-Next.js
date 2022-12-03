@@ -117,18 +117,13 @@ export default function Review(){
     return(
         <>
             <div className={styles.container_review}>
-                <form action="" method="post" id="ReviewForm">
-                    <label htmlFor="app_review" className={styles.label}>App review</label><br />
-                    <textarea className={styles.textarea} id="app_review" name="app_review" placeholder="Please give a review." required></textarea><br />
-                    <label htmlFor="restaurant_review" className={styles.label}>Any Restaurant Review</label><br />
-                    <textarea className={styles.textarea} id="restaurant_review" name="restaurant_review" placeholder="Please mention the name of the restaturant followed by a give a review in then next line."></textarea><br/>
-                    <label htmlFor="rating" className={styles.label}>Rating (between 1 and 5):</label><br/>
-                    {/* <input type="number" id="rating" name="rating" min="1" max="5" step="0.01" className={styles.input}></input><br /> */}
-                    <Rating val ={val} setVal={setVal}/>
-                    <Button type="submit" variant="outlined" color="success" sx={{m:2}} onClick={(e)=>{
-                        handleClick(e);
-                    }}>Submit</Button>
-                </form>
+          
+             <form action="https://formsubmit.co/your@email.com" method="POST">            
+            <input type="text" name="name" required><br/>
+             <input type="text" name="review" required><br/>
+            <input type="email" name="email" required>
+            <button type="submit">Send</button>
+             </form>
             </div>
             <div className={styles.reviews}>
                 {
